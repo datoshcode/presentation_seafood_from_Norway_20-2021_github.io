@@ -1,0 +1,553 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: #232222;
+}
+
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* font-family: 'Roboto Slab', serif;  */
+.title,
+.header__content-btn,
+.product__name-item,
+.product__content-item span,
+.product__content-title,
+.product__content-btn,
+.seafood__item,
+.seafood__item-title,
+.contacts-box-text {
+  font-family: "Roboto Slab", serif;
+}
+
+/* Header top */
+.header__top {
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 20px;
+}
+
+.logo {
+  margin-left: 16px;
+}
+
+.phone {
+  margin-top: 11px;
+  margin-right: 43px;
+}
+
+.menu {
+  margin-top: 16px;
+}
+
+/* Кнопка меню для мобильной версии */
+.menu__btn {
+  display: none;
+  width: 40px;
+  border: none;
+  background-color: transparent;
+  padding: 13px 0;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+
+.menu__btn::before,
+.menu__btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #001e64;
+}
+
+.menu__btn::before {
+  top: 0;
+}
+
+.menu__btn::after {
+  bottom: 0;
+}
+
+.menu__btn span {
+  display: block;
+  height: 4px;
+  background-color: #001e64;
+}
+/* Кнопка меню для мобильной версии //end */
+
+.menu__list {
+  display: flex;
+}
+
+.menu__item + .menu__item {
+  margin-left: 30px;
+}
+
+.menu__link {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  transition: all 0.3s;
+  text-transform: uppercase;
+
+  color: #001e64;
+}
+
+.menu__link:hover {
+  border-bottom: 1px solid #001e64;
+}
+/* Header top //end */
+
+/* Header content */
+.header__content {
+  min-height: calc(100vh - 50px);
+  margin-top: -100px;
+  padding-bottom: 20px;
+
+  background-image: url(../images/header/header-bg.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+.title {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 95px;
+
+  max-width: 589px;
+  margin-bottom: 60px;
+  padding-top: 170px;
+  padding-left: 112px;
+
+  color: #001e64;
+}
+
+/* Слайдер */
+.header-slider {
+  max-width: 522px;
+  padding-top: 57px;
+  padding-bottom: 135px;
+  padding-left: 112px;
+}
+
+.header-slider-text {
+  font-size: 18px;
+  line-height: 22px;
+
+  margin-bottom: 25px;
+
+  color: #ffffff;
+}
+
+.slick-prev,
+.slick-next {
+  position: absolute;
+  left: 40px;
+
+  padding: 0;
+
+  border: none;
+  background-color: transparent;
+}
+
+.slick-prev {
+  top: 0;
+}
+
+.slick-next {
+  bottom: 0;
+}
+
+.slick-dots {
+  position: absolute;
+  top: 58px;
+  bottom: 55px;
+  left: 35px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  list-style: none;
+}
+
+.slick-dots button {
+  font-size: 24px;
+  line-height: 28px;
+
+  padding: 0;
+
+  color: rgba(255, 255, 255, 0.5);
+  border: none;
+  background-color: transparent;
+}
+
+.slick-active button:not(.product__content-btn) {
+  color: #ffffff;
+}
+/* Слайдер //end */
+
+/* Счетчик дотсов слайдера для больше 10 элементов */
+.slick-dots button::before {
+  content: "0";
+}
+
+.slick-dots li:nth-child(n + 10) button::before {
+  content: "";
+}
+
+/* Кнопка "Выбрать" */
+.header__content-btn {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+
+  position: absolute;
+
+  display: inline-block;
+
+  margin-left: 112px;
+  padding: 14px 88px;
+
+  transform: translateY(-100px);
+  text-transform: uppercase;
+
+  color: #ffffff;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+
+  transition: all 0.3s;
+}
+
+.header__content-btn:hover {
+  color: #001e64;
+  background-color: rgb(255, 255, 255);
+}
+
+/* Языковая панель */
+.header__content-box {
+  font-size: 18px;
+  line-height: 21px;
+
+  display: flex;
+  justify-content: flex-end;
+
+  margin-right: 30px;
+
+  color: #ffffff;
+}
+
+.header__content-link--active {
+  font-weight: 700;
+}
+/* Header content //end*/
+
+/* Перечень морепродуктов */
+
+.product {
+  padding-top: 100px;
+}
+
+.product__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product__name {
+  width: 510px;
+  padding-top: 41px;
+
+  text-align: center;
+}
+
+.product__name-item {
+  font-size: 24px;
+  line-height: 32px;
+
+  cursor: pointer;
+}
+
+.product__name-item.slick-current {
+  font-size: 36px;
+  font-weight: 700;
+
+  color: #001e64;
+}
+
+.product__name-item + .product__name-item {
+  margin-top: 30px;
+}
+
+.product-prev {
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.product-prev,
+.product-next {
+  padding: 0;
+
+  cursor: pointer;
+
+  border: none;
+  background-color: transparent;
+}
+
+.product__content {
+  width: 600px;
+}
+
+.product__content-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product__content-img {
+  width: 260px;
+  max-height: 260px;
+
+  object-fit: contain;
+}
+
+.product__content-list {
+  width: 291px;
+
+  list-style: none;
+}
+
+.product__content-item {
+  margin-bottom: 30px;
+}
+
+.product__content-item span {
+  font-size: 18px;
+  line-height: 24px;
+
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #001e64;
+}
+
+.product__content-title {
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 32px;
+
+  margin-bottom: 20px;
+  padding-top: 20px;
+
+  color: #001e64;
+}
+
+.product__content-text {
+  margin-bottom: 25px;
+}
+
+.product__content-btn {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+
+  display: inline-block;
+
+  padding: 12px 85px;
+  padding-bottom: 20px;
+
+  text-transform: uppercase;
+
+  color: #001e64;
+  border: 1px solid #001e64;
+  border-radius: 20px;
+  background-color: transparent;
+  transition: all 0.3s;
+}
+
+.product__content-btn:hover {
+  color: #fff;
+  background-color: #001e64;
+}
+/* Перечень морепродуктов //end*/
+
+/* Преимущества */
+.seafood-box {
+  padding: 290px 0 95px;
+
+  background-image: url(../images/product/seafood-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+.seafood-box__list {
+  display: flex;
+  justify-content: space-around;
+}
+.seafood-box__item {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 180px;
+  min-height: 165px;
+
+  list-style: none;
+
+  text-align: center;
+
+  color: #ffffff;
+  background-image: url(../images/product/seafood-decor.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+/* Преимущества //end */
+
+/* Описание лучших морепродуктов  */
+.seafood {
+  padding: 100px 0;
+}
+
+.seafood__items {
+  margin-bottom: 100px;
+}
+
+.seafood__item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.seafood__item-title {
+  max-width: 490px;
+  margin-bottom: 30px;
+  font-size: 24px;
+  line-height: 29px;
+  color: #001e64;
+}
+
+.seafood__item-text {
+  max-width: 420px;
+  margin-bottom: 20px;
+}
+
+.seafood__item-text-right .seafood__item-title {
+  max-width: 420px;
+}
+
+.seafood__item-text-right .seafood__item-content {
+  margin-right: 180px;
+}
+
+.seafood__item-img {
+  max-width: 600px;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Цитата */
+.seafood__blockquote {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.seafood__blockquote-text {
+  max-width: 530px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 24px;
+}
+/* Описание лучших морепродуктов //end */
+
+/* Контакты */
+.contacts {
+  background-image: url(../images/contacts/contacts-img.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+
+.contacts-box {
+  margin-left: auto;
+  width: 390px;
+  background-color: #fff;
+  padding: 33px 0 33px 20px;
+}
+.contacts-box-text {
+  width: 195px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #001e64;
+  margin-bottom: 30px;
+}
+.contacts-box-list {
+  list-style: none;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.contacts-box-item {
+  margin-top: 30px;
+}
+
+.contacts-box-item span {
+  display: block;
+}
+
+/* Контакты //end*/
+
+/* footer */
+
+.footer {
+  padding: 25px 0 110px;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 45px 0 23px;
+}
+
+.footer__inner .menu {
+  padding-bottom: 30px;
+}
+
+.footer__inner .logo {
+  margin-left: 0;
+}
+
+.footer__social-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.footer__social-item + .footer__social-item {
+  margin-left: 10px;
+}
+
+.footer__social-link path {
+  transition: all 0.3s;
+}
+
+.footer__social-link:hover path {
+  fill: #001e64;
+}
